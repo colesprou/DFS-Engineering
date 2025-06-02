@@ -3,7 +3,7 @@
 ## Overview
 - This project is a robust Python Flask application designed for a high stakes DFS player. It is tailored to adeptly handle CSV file uploads, perform data processing and cleaning, and prepare model-ready data for immediate download to the user's device. All major sports are supported on this app.
 
-- Also, I have added an enpoint /MLBOptimizer that gives the user a optimized MLB DFS lineup directly down to your device when you upload DFS lineups from DraftKings.
+- Also, I have added an enpoint /MLBOptimizer that gives the user a optimized MLB DFS lineup directly down to your device when you upload DraftKings Player Salary's CSV.
 
 ## Key Features
 - CSV File Handling: Upload, process, and clean CSV files to prepare them for data modeling.
