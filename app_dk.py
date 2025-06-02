@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, send_from_directory, send_file, url_for, redirect
-import os
 from cole_fantasy_proj import pitcher_data_dfs, batter_data_dfs, generate_fantasy_projections, generate_multiple_lineups,extract_opponent
-
 from pulp import LpMaximize, LpProblem, LpVariable, lpSum, LpBinary
 import ortools
 from ortools.linear_solver import pywraplp
@@ -19,7 +17,6 @@ from datetime import datetime, timedelta, timezone, time
 from OddsJamClient import OddsJamClient
 import string
 
-import os
 from dotenv import load_dotenv
 import json
 from fuzzywuzzy import fuzz, process
