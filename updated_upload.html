@@ -42,6 +42,36 @@
 </head>
 <body>
     <div class="container">
+        <h1>Pick 6 Data Processor</h1>
+        <p>Select a league to process the Pick 6 data:</p>
+
+        <!-- Button for MLB -->
+        <form action="/process_pick6" method="POST">
+            <input type="hidden" name="league" value="MLB">
+            <button type="submit">Process MLB Data</button>
+        </form>
+        <br>
+        
+        <!-- Button for NFL -->
+        <form action="/process_pick6" method="POST">
+            <input type="hidden" name="league" value="NFL">
+            <button type="submit">Process NFL Data</button>
+        </form>
+                <!-- Button for NBA -->
+                <form action="/process_pick6" method="POST">
+                    <input type="hidden" name="league" value="NBA">
+                    <button type="submit">Process NBA Data</button>
+                </form>
+                        <!-- Button for NBA -->
+        <form action="/process_pick6" method="POST">
+                            <input type="hidden" name="league" value="NHL">
+                            <button type="submit">Process NHL Data</button>
+        </form>
+        
+        
+    </div>
+
+    <div class="container">
         <h1>Optimized MLB FanDuel Data Processor</h1>
         <p>Upload player list data for any FD event:</p>
         <form action="/process_mlb_fd_optimized" method="POST" enctype="multipart/form-data">
@@ -79,6 +109,27 @@
             <button type="submit">Upload and Process</button>
         </form>
     </div>
+        <!-- NFL FanDuel Optimized Data Processor -->
+    <div class="container">
+        <h1>Optimized NFL FanDuel Data Processor</h1>
+        <p>Upload player list data for optimized NFL FanDuel event processing:</p>
+        <form action="/process_nfl_fd_optimized" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br><br>
+            <button type="submit">Upload and Process</button>
+        </form>
+    </div>
+            <!-- NFL FanDuel Optimized Data Processor -->
+            <div class="container">
+                <h1>Optimized NFL DraftKings Data Processor</h1>
+                <p>Upload player list data for optimized NFL FanDuel event processing:</p>
+                <form action="/process_nfl_dk_optimized" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" required>
+                    <br><br>
+                    <button type="submit">Upload and Process</button>
+                </form>
+            </div>
+        
     <div class="container">
         <h1>NFL FanDuel Data Processor</h1>
         <p>Please upload data from any FD NFL event</p>
@@ -111,9 +162,6 @@
         <h1>PGA FanDuel Data Processor</h1>
         <p>Upload FanDuel golf data for PGA event and specify the tournament name</p>
         <form action="/process_golf_fd" method="POST" enctype="multipart/form-data">
-            <label for="tournament_name">PGA Tournament Name:</label>
-            <input type="text" name="tournament_name" id="tournament_name" placeholder="Enter tournament name" required>
-            <br><br>
             <input type="file" name="file" required>
             <br><br>
             <button type="submit">Upload and Process</button>
@@ -124,9 +172,6 @@
             <h1>PGA DraftKings Data Processor</h1>
             <p>Upload DraftKings golf data for PGA event</p>
             <form action="/process_golf_dk" method="POST" enctype="multipart/form-data">
-                <label for="tournament_name">PGA Tournament Name:</label>
-                <input type="text" name="tournament_name" id="tournament_name" placeholder="Enter tournament name" required>
-                <br><br>
                 <input type="file" name="file" required>
                 <br><br>
                 <button type="submit">Upload and Process</button>
@@ -137,10 +182,10 @@
         <p>Please upload the required files below:</p>
         <form action="/process_nba_fd" method="POST" enctype="multipart/form-data">
             <label>Choose FD Salaries:</label>
-            <input type="file" name="fd_salaries" required>
+            <input type="file" name="fd_salaries">
             <br><br>
             <label>Choose NBA Projections:</label>
-            <input type="file" name="nba_projections" required>
+            <input type="file" name="nba_projections">
             <br><br>
             <button type="submit">Upload and Process</button>
         </form>
@@ -152,10 +197,10 @@
         <p>Please upload the required files below:</p>
         <form action="/process_nba_dk" method="POST" enctype="multipart/form-data">
             <label>Choose DK Salaries:</label>
-            <input type="file" name="dk_salaries" required>
+            <input type="file" name="dk_salaries">
             <br><br>
             <label>Choose NBA Projections:</label>
-            <input type="file" name="nba_projections" required>
+            <input type="file" name="nba_projections">
             <br><br>
             <button type="submit">Upload and Process</button>
         </form>
